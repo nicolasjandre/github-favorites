@@ -7,8 +7,9 @@
 
 
 <br>
-<hr>
+<p align="center">
 <img src="./.github/preview.jpg" alt="Preview do projeto Github Favorites">
+</p>
 
 <hr>
 <p align="center">Tecnologias utilizadas:
