@@ -96,18 +96,18 @@ export class FavoritesView extends Favorites {
     createTableRow() {
         const tableRow = document.createElement('tr')
         tableRow.innerHTML = `
-            <tr>
-                <td class="user">
-                    <img src="https://github.com/nicolasjandre.png" alt="Imagem do Usuário">
-                    <a href="https://github.com/nicolasjandre" target="_blank">
-                        <p>Nicolas Jandre</p>
-                        <span>nicolasjandre</span>
-                    </a>
-                </td>
-                <td class="repositories">11</td>
-                <td class="followers">0</td>
-                <td class="remove"><button>&times;</button></td>
-            </tr>
+        <tr>
+            <td scope="row" class="user">
+                <img src="https://github.com/nicolasjandre.png" alt="Imagem do Usuário">
+                <a href="https://github.com/nicolasjandre" target="_blank">
+                    <p>Nicolas Jandre</p>
+                    <span>nicolasjandre</span>
+                </a>
+            </td>
+            <td data-label="Repositórios" class="repositories">11</td>
+            <td data-label="Seguidores" class="followers">0</td>
+            <td class="remove"><button>&times;</button></td>
+        </tr>
         `
 
         return tableRow

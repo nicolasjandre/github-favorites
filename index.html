@@ -27,27 +27,31 @@
                 <button type="button" form="input-search">&plus;</button>
             </div>
         </header>
+        <div class="layout-range">
+            <label for="layout-input">Cor do layout:</label>
+            <input id="layout-input" type="range" min="0" max="340">
+        </div>
         <table>
             <thead>
                 <tr>
-                    <th>Usuário</th>
-                    <th>Repositórios</th>
-                    <th>Seguidores</th>
-                    <th></th>
+                    <th scope="col">Usuário</th>
+                    <th scope="col">Repositórios</th>
+                    <th scope="col">Seguidores</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="user">
+                    <td scope="row" data-label="Usuário" class="user">
                         <img src="https://github.com/nicolasjandre.png" alt="Imagem do Usuário">
                         <a href="https://github.com/nicolasjandre" target="_blank">
                             <p>Nicolas Jandre</p>
                             <span>nicolasjandre</span>
                         </a>
                     </td>
-                    <td class="repositories">11</td>
-                    <td class="followers">0</td>
-                    <td class="remove"><button>&times;</button></td>
+                    <td data-label="Repositórios" class="repositories">11</td>
+                    <td data-label="Seguidores" class="followers">0</td>
+                    <td data-label="Remover" class="remove"><button>&times;</button></td>
                 </tr>
             </tbody>
         </table>

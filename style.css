@@ -14,7 +14,7 @@
     --hue:  190;
     --primary-color: hsl(var(--hue), 70%, 60%);
     --bg-body: hsl(var(--hue), 15%, 90%);
-    --bg-one: hsl(var(--hue), 35%, 85%);
+    --bg-one: hsl(var(--hue), 35%, 45%);
     --bg-two: hsl(var(--hue), 35%, 65%);
     --border-img: hsl(var(--hue), 100%, 50%);
     --border-input-color: hsl(var(--hue), 100%, 80%);
@@ -53,7 +53,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 1rem;
 }
 
 header h1 {
@@ -94,10 +94,23 @@ header h1 {
     filter: brightness(.6);
 }
 
+.layout-range {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.layout-range input {
+    margin: auto;
+    min-width: 200px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3)
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
 
 table * {
@@ -165,4 +178,54 @@ td.remove button {
 
 td.remove button:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 499px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    table {
+        table-layout: fixed;
+        border: 0;
+    }
+      
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+      
+    table tr {
+        display: block;
+    }
+      
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+    }
+      
+    table td::before {
+        font-weight: bold;
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+    }
+
+    .user:first-child {
+        justify-content: center;
+    }
+
+    .remove {
+        margin: auto;
+        transform: scale(1.5);
+        border: none;
+        width: fit-content;
+    }
 }
