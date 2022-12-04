@@ -50,8 +50,7 @@ export class FavoritesView extends Favorites {
         const addButton = this.root.querySelector('.search button')
         const usernameInput = document.querySelector('.search input')
         addButton.onclick = () => {
-
-            this.add(usernameInput.value)
+            this.add(usernameInput.value.toLowerCase())
 
             usernameInput.value = ""
         }
